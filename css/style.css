@@ -98,7 +98,7 @@ body{
     transform: scale(1.1);
 }
 .home{
-    min-width: 100vh;
+    min-height: 100vh;
     height: 100%;
     width: 100%;
     position: relative;
@@ -213,12 +213,10 @@ header.sticky{
     height: auto;
 }
 .about-text h3{
-    color: var(--bg-color);
     font-size: 32px;
     margin-bottom: 20px;
 }
 .about-text p{
-    color: var(--bg-color);
     font-size: var(--p-font);
     line-height: 25px;
     margin-bottom: 20px;
@@ -299,9 +297,10 @@ header.sticky{
     opacity: 1;
 }
 .contact{
+    width: 100%;
     background: linear-gradient(360deg, #000000, #69151F);
     margin-top: 150px;
-    padding: 50px 120px;
+    padding: 50px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,7 +341,7 @@ footer{
     font-size: var(--p-font);
     color: var(--second-color);
 }
-/*
+
 @media (max-width: 1200px){
     section{
         padding-left: 20px;
@@ -360,7 +359,7 @@ footer{
         transition: .3s;
     }
 }
-@media (max-wdith: 860px){
+@media (max-width: 860px){
     .home{
         grid-template-columns: 1fr;
         min-height: 100vh;
@@ -382,21 +381,21 @@ footer{
     .home{
         min-height: 80%;
     }
-}
-.navbar-header{
-    position: absolute;
-    top: -1000px;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background: #ccc;
-    opacity: 0.8;
-    text-align: center;
-    transition: all .50s;
-}
-.navbar-header a{
-    display: block;
-    padding: 0.8rem;
+    .navbar-header{
+        position: absolute;
+        top: -1000px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--main-color);
+        opacity: 0.8;
+        text-align: center;
+        transition: all .50s;
+        border-radius: 8px;
+    }
+    .navbar-header a{
+        display: block;
+        padding: 0.8rem;
 }
 .navbar-header a:hover{
     background: var(--main-color);
@@ -422,4 +421,29 @@ footer{
 }
 .portfolio-content{
     grid-template-columns: 2fr;
+}
+}
+@media(max-width: 480px){
+    .home-image img{
+        width: 350px;
+    }
+    header{
+        width: 100%;
+    }
+    section{
+        position: relative;
+        left: 10px;
+    }
+    .contact form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .contact form input[type="email"]{
+        width: 300px;
+    }
+
 }

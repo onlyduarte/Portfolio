@@ -99,13 +99,15 @@ body{
 }
 .home{
     min-height: 100vh;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     grid-gap: 5rem;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .home-text h1{
     color: white;
@@ -297,7 +299,7 @@ header.sticky{
     opacity: 1;
 }
 .contact{
-    width: 100%;
+    width: 100vw;
     background: linear-gradient(360deg, #000000, #69151F);
     margin-top: 150px;
     padding: 50px 0;
@@ -306,6 +308,7 @@ header.sticky{
     justify-content: center;
     text-align: center;
     border-radius: 10px;
+    left: 0;
 }
 .contact-text h3{
     font-size: 25px;
@@ -344,8 +347,6 @@ footer{
 
 @media (max-width: 1200px){
     section{
-        padding-left: 20px;
-        padding-right: 20px;
         transition: .3s;
     }
     home-image img{
@@ -424,20 +425,22 @@ footer{
 }
 }
 @media(max-width: 480px){
+    .home-text{
+        padding-left: 20px;
+    }
+    section{
+        padding-top: 200px;
+    }
     .home-image img{
         width: 350px;
     }
     header{
-        width: 100%;
-    }
-    section{
-        position: relative;
-        left: 10px;
+        width: 100vw;
     }
     .contact form{
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 100vw;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -445,5 +448,10 @@ footer{
     .contact form input[type="email"]{
         width: 300px;
     }
-
+    .home-text h1,h5 p{
+        font-size: 50px;
+    }
+    .home-text{
+        width: 50%;
+    }
 }
